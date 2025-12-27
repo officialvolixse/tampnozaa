@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="w-full max-w-6xl">
+    <div class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-2">
+      <h1 class="text-3xl font-bold text-gray-800 text-center font-sans sm:text-left">List Tampilan Web</h1>
+            <div class='bg-white rounded overflow-hidden cursor-pointer border p-0.5 hover:shadow-md transition' onclick="openModal('https://j.top4top.io/p_3648oywsw0.jpg')">
+        <img src='https://j.top4top.io/p_3648oywsw0.jpg' class='w-full h-200 object-cover rounded-sm' alt='Foto'>
+      </div>
+      
+      <div class='bg-white rounded overflow-hidden cursor-pointer border p-0.5 hover:shadow-md transition' onclick="openModal('https://j.top4top.io/p_3648ixh5u0.jpg')">
+        <img src='https://j.top4top.io/p_3648ixh5u0.jpg' class='w-full h-200 object-cover rounded-sm' alt='Foto'>
+      </div>
+      <div class='bg-white rounded overflow-hidden cursor-pointer border p-0.5 hover:shadow-md transition' onclick="openModal('https://f.top4top.io/p_36487x4zm0.jpg')">
+        <img src='https://f.top4top.io/p_36487x4zm0.jpg' class='w-full h-200 object-cover rounded-sm' alt='Foto'>
+      </div>
+      <div class='bg-white rounded overflow-hidden cursor-pointer border p-0.5 hover:shadow-md transition' onclick="openModal('https://a.top4top.io/p_3648grbxs0.jpg')">
+        <img src='https://a.top4top.io/p_3648grbxs0.jpg' class='w-full h-200 object-cover rounded-sm' alt='Foto'>
+      </div>
+    </div>
+    <script>
+    function openModal(src) {
+      const modal = document.getElementById('modal');
+      const modalContent = document.getElementById('modalContent');
+      const img = document.getElementById('modalImg');
+
+      img.src = src;
+      modal.classList.remove('hidden');
+
+      modalContent.classList.add('fade-enter');
+      setTimeout(() => {
+        modalContent.classList.add('fade-enter-active');
+        modalContent.classList.remove('fade-enter');
+      }, 10);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      const modalContent = document.getElementById('modalContent');
+
+      modalContent.classList.remove('fade-enter-active');
+      modalContent.classList.add('fade-leave');
+      setTimeout(() => {
+        modalContent.classList.remove('fade-leave');
+        modal.classList.add('hidden');
+      }, 200);
+    }
+  </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"fb921259320a4b22a38b09b18500d1fa","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+  </body>
+</html>
